@@ -7,4 +7,10 @@
   background: var(--color-black);
   color: var(--color-white);
   z-index: 1000;
+
+  .songInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }

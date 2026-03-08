@@ -9,7 +9,7 @@ export default function PlayerBar() {
   return (
     <div className={styles.bar}>
       {currentSong ? (
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <div className={styles.songInfo}>
           <img
             src={currentSong.artworkUrl100}
             alt={currentSong.trackName}
