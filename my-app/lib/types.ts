@@ -8,7 +8,7 @@ export interface Song {
   trackId: number;
   trackName: string;
   artistName: string;
-  collectionId: number;
+  collectionId: string;
   collectionName: string;
   artworkUrl100: string;
   previewUrl?: string;
@@ -19,7 +19,7 @@ export interface Song {
 export interface Album {
   wrapperType: "collection";
   collectionType: "Album";
-  collectionId: number;
+  collectionId: string;
   collectionName: string;
   artistName: string;
   artworkUrl100: string;

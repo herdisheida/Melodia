@@ -1,17 +1,13 @@
-// localhost:3000/album/{collectionId}
 "use client";
 
 import { useEffect, useState } from "react";
 import { lookupAlbum } from "@/lib/itunes";
 import type { Album, Song } from "@/lib/types";
+import { useParams } from "next/navigation";
 
-type AlbumPageProps = {
-  params: {
-    id: string;
-  };
-};
+export default function AlbumPage() {
+  const param = useParams() as { collectionId: string };
 
-export default function AlbumPage({ params }: AlbumPageProps) {
   const [album, setAlbum] = useState<Album | null>(null);
   const [tracks, setTracks] = useState<Song[]>([]);
   const [loading, setLoading] = useState(true);
@@ -20,7 +16,7 @@ export default function AlbumPage({ params }: AlbumPageProps) {
     async function loadAlbum() {
       try {
         setLoading(true);
-        const data = await lookupAlbum(params.id);
+        const data = await lookupAlbum(param.collectionId);
         setAlbum(data.album);
         setTracks(data.tracks);
       } catch (error) {
@@ -31,9 +27,8 @@ export default function AlbumPage({ params }: AlbumPageProps) {
     }
 
     loadAlbum();
-  }, [params.id]);
+  }, [param.collectionId]);
 
-  //   TODO add loading spinner ( make hook/context for loading to reuse across app)
   if (loading) return <p>Loading album...</p>;
   if (!album) return <p>Album not found.</p>;
 

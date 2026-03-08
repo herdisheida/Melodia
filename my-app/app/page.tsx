@@ -57,9 +57,9 @@ export default function HomePage() {
             <h3>{song.trackName}</h3>
             <p>{song.artistName}</p>
 
-            {/* <Link href={`/album/${song.collectionId}`}>
+            <Link href={`/album/${song.collectionId}`}>
               {song.collectionName}
-            </Link> */}
+            </Link>
           </div>
         ))}
       </div>
