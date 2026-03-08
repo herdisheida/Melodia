@@ -1,7 +1,6 @@
 .sidebar {
-  /* position: fixed;
-  top: 0;
-  left: 0; */
+  grid-area: sidebar;
+
   width: 220px;
   height: 100vh;
   background: var(--color-main-bg);

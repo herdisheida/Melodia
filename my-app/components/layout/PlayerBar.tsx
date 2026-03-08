@@ -7,7 +7,7 @@ export default function PlayerBar() {
   const { currentSong } = usePlayer();
 
   return (
-    <div className={styles.bar}>
+    <div className={styles.playerBar}>
       {currentSong ? (
         <div className={styles.songInfo}>
           <img

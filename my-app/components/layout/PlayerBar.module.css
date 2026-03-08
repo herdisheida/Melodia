@@ -1,7 +1,10 @@
-.bar {
-  position: fixed;
+.playerBar {
+  /* position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; */
+  grid-area: player;
+  border-top: 1px solid #333;
+
   width: 100%;
   padding: 1rem;
   background: var(--color-black);

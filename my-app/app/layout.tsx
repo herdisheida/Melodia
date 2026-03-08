@@ -49,11 +49,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex h-screen">
+      <body>
         <PlayerProvider>
-          <Sidebar />
-          <div>{children}</div>
-          <PlayerBar />
+          <div className="appLayout">
+            <Sidebar />
+            <main className="mainContent">{children}</main>
+            <PlayerBar />
+          </div>
         </PlayerProvider>
       </body>
     </html>
