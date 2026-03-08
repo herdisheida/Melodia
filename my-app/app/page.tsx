@@ -1,10 +1,9 @@
-// homepage - search for songs
 "use client";
 
 import { useEffect, useState } from "react";
 import { searchSongs } from "@/lib/itunes";
 import type { Song } from "@/lib/types";
-
+import SearchInput from "@/components/search/SearchInput";
 import SongGrid from "@/components/search/SongGrid";
 
 export default function HomePage() {
@@ -12,7 +11,6 @@ export default function HomePage() {
   const [songs, setSongs] = useState<Song[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // TODO debounce or only search when user presses "enter"
   useEffect(() => {
     const timeout = setTimeout(async () => {
       if (!query.trim()) {
@@ -25,7 +23,7 @@ export default function HomePage() {
         const results = await searchSongs(query);
         setSongs(results);
       } catch (error) {
-        console.error(error);
+        console.error("Failed to fetch songs", error);
       } finally {
         setLoading(false);
       }
@@ -37,19 +35,9 @@ export default function HomePage() {
   return (
     <main>
       <h1>Melodia</h1>
-
-      <input
-        type="text"
-        value={query}
-        placeholder="Search songs..."
-        onChange={(e) => setQuery(e.target.value)}
-      />
-
-      {/* TODO add loading spinner */}
-      {loading && <p>Loading...</p>}
-
-      {/* TODO fix ui on search song results*/}
-      <SongGrid songs={songs} />
+      <h3>Browse Songs</h3>
+      <SearchInput value={query} onChange={setQuery} />
+      {loading ? <p>Loading...</p> : <SongGrid songs={songs} />}
     </main>
   );
 }
