@@ -4,8 +4,8 @@
   left: 0;
   width: 100%;
   padding: 1rem;
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--color-main-bg);
+  color: var(--color-main-font);
   z-index: 1000;
 
   .songInfo {
