@@ -3,7 +3,7 @@
 import type { Song } from "@/lib/types";
 import { usePlayer } from "@/context/PlayerContext";
 import Link from "next/link";
-import styles from "@/components/search/SongCard.module.css";
+import styles from "./SongCard.module.css";
 
 export default function SongCard({ song }: { song: Song }) {
   const { setCurrentSong } = usePlayer();
