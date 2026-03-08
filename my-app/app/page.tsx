@@ -1,9 +1,11 @@
+// homepage - search for songs
 "use client";
 
 import { useEffect, useState } from "react";
 import { searchSongs } from "@/lib/itunes";
 import type { Song } from "@/lib/types";
-import Link from "next/link";
+
+import SongCard from "@/components/SongCard";
 
 export default function HomePage() {
   const [query, setQuery] = useState("adele");
@@ -49,18 +51,7 @@ export default function HomePage() {
       {/* TODO fix ui on search song results*/}
       <div>
         {songs.map((song) => (
-          <div key={song.trackId}>
-            <Link href={`/album/${song.collectionId}`}>
-              <img src={song.artworkUrl100} alt={song.trackName} />
-            </Link>
-
-            <h3>{song.trackName}</h3>
-            <p>{song.artistName}</p>
-
-            <Link href={`/album/${song.collectionId}`}>
-              {song.collectionName}
-            </Link>
-          </div>
+          <SongCard key={song.trackId} song={song} />
         ))}
       </div>
     </main>
