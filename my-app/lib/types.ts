@@ -1,5 +1,9 @@
+type WrapperType = "track" | "collection";
+// type SongKind = "song";
+// type CollectionType = "Album";
+
 export interface Song {
-  wrapperType: "track";
+  wrapperType: WrapperType;
   kind: "song";
   trackId: number;
   trackName: string;
