@@ -7,13 +7,14 @@
   gap: 0.6rem;
   color: var(--color-main-font);
 
-  .info {
-    .image {
-      width: 100%;
-      border-radius: 10px;
-      display: block;
-    }
+  .image {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
 
+  .info {
+    margin: 0.5rem;
     .title {
       font-size: 1rem;
       font-weight: 700;
@@ -31,7 +32,6 @@
 }
 
 .playBtn {
-  margin-top: 0.5rem;
   padding: 0.65rem 1rem;
   border: none;
   border-radius: 8px;

@@ -10,16 +10,16 @@ export default function SongCard({ song }: { song: Song }) {
 
   return (
     <div className={styles.card}>
-      <div key={song.trackId} className={styles.info}>
-        {/* album image -> goes to album page */}
-        <Link href={`/album/${song.collectionId}`}>
-          <img
-            className={styles.image}
-            src={song.artworkUrl100}
-            alt={song.trackName}
-          />
-        </Link>
+      {/* album image -> goes to album page */}
+      <Link href={`/album/${song.collectionId}`}>
+        <img
+          className={styles.image}
+          src={song.artworkUrl100}
+          alt={song.trackName}
+        />
+      </Link>
 
+      <div key={song.trackId} className={styles.info}>
         <h3 className={styles.title}>{song.trackName}</h3>
         <p className={styles.artist}>{song.artistName}</p>
 
