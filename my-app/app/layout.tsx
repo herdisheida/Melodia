@@ -52,7 +52,9 @@ export default function RootLayout({
       <body>
         <PlayerProvider>
           <div className="appLayout">
-            <Sidebar />
+            <aside className="sidebarArea">
+              <Sidebar />
+            </aside>
             <main className="mainContent">{children}</main>
             <PlayerBar />
           </div>

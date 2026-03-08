@@ -14,21 +14,14 @@ body,
 
 .appLayout {
   display: grid;
-
-  grid-template-columns: 220px 1fr;
-  grid-template-rows: 1fr 80px;
-
-  grid-template-areas:
-    "sidebar main"
-    "player";
-
-  height: 100vh;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
 }
 
-.mainContent {
-  grid-area: main;
-  overflow-y: auto;
+.mainArea {
+  min-width: 0;
   padding: 2rem;
+  padding-bottom: 110px; /* space for overlay playerBar */
 }
 
 p,

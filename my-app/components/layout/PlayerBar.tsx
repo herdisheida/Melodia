@@ -16,8 +16,8 @@ export default function PlayerBar() {
             alt={currentSong.trackName}
           />
           <div>
-            <div>{currentSong.trackName}</div>
-            <div>{currentSong.artistName}</div>
+            <div className={styles.trackName}>{currentSong.trackName}</div>
+            <div className={styles.artistName}>{currentSong.artistName}</div>
           </div>
         </div>
       ) : (

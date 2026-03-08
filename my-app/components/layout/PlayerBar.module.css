@@ -1,15 +1,24 @@
 .playerBar {
-  /* position: fixed;
-  bottom: 0;
-  left: 0; */
-  grid-area: player;
-  border-top: 1px solid #333;
-
   width: 100%;
   padding: 1rem;
   background: var(--color-black);
   color: var(--color-main-font);
   z-index: 1000;
+
+  /* fixed position on bottom of screen */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+
+  height: 100px;
+  background: var(--color-black);
+  color: var(--color-main-font);
+  border-top: 2px solid var(--color-border);
+  padding: 0 2rem;
 
   .songInfo {
     display: flex;
@@ -21,6 +30,13 @@
       height: 80px;
       object-fit: cover;
       border-radius: 4px;
+    }
+
+    .trackName {
+      font-weight: bold;
+    }
+    .artistName {
+      color: var(--color-secondary-font);
     }
   }
 }
