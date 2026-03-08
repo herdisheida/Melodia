@@ -7,6 +7,6 @@
   position: sticky;
   top: 0;
 
-  background: var(--color-main-bg);
+  background: var(--color-black);
   color: var(--color-main-font);
 }

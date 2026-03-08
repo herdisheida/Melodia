@@ -25,7 +25,9 @@ export default function SongCard({ song }: { song: Song }) {
 
         {/* album name -> goes to album page */}
         <Link href={`/album/${song.collectionId}`} className={styles.albumLink}>
-          {song.collectionName}
+          {/* album name: up to XX characters -> if longer do '...' */}
+          {song.collectionName.substring(0, 30) +
+            (song.collectionName.length > 30 ? "..." : "")}
         </Link>
       </div>
 

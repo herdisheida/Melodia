@@ -10,11 +10,13 @@ body,
   height: 100%;
   margin: 0;
   font-family: "Lato", sans-serif;
+  background-color: var(--color-main-bg);
+  color: var(--color-main-font);
 }
 
 .appLayout {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 200px 1fr;
   min-height: 100vh;
 }
 
