@@ -13,8 +13,7 @@ export default function PlayerBar() {
           <img
             src={currentSong.artworkUrl100}
             alt={currentSong.trackName}
-            width={60}
-            height={60}
+            className={styles.artwork}
           />
           <div>
             <div>{currentSong.trackName}</div>
