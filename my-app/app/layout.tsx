@@ -36,22 +36,23 @@
 // }
 
 // new
-import "./globals.css";
+import "../styles/global.css";
+import "../styles/variables.css";
 import { PlayerProvider } from "@/context/PlayerContext";
 import Sidebar from "@/components/layout/Sidebar";
 import PlayerBar from "@/components/layout/PlayerBar";
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex h-screen">
         <PlayerProvider>
           <Sidebar />
-          <main>{children}</main>
+          <div>{children}</div>
           <PlayerBar />
         </PlayerProvider>
       </body>

@@ -1,0 +1,9 @@
+:root {
+  /* colors */
+  --color-white: white;
+  --color-black: black;
+
+  /* main colors */
+  --color-main-bg: #181818;
+  --color-main-font: white;
+}
