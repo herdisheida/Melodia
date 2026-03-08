@@ -1,0 +1,11 @@
+.card {
+  background-color: red;
+
+  .info {
+    background-color: green;
+  }
+}
+
+.playBtn {
+  background-color: blue;
+}
