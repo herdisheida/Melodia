@@ -5,11 +5,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  color: white;
+  color: var(--color-main-font);
 
   .info {
-    background-color: green;
-
     .image {
       width: 100%;
       border-radius: 10px;
