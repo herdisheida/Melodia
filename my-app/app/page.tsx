@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { searchSongs } from "@/lib/itunes";
 import type { Song } from "@/lib/types";
 
-import SongCard from "@/components/search/SongCard";
+import SongGrid from "@/components/search/SongGrid";
 
 export default function HomePage() {
   const [query, setQuery] = useState("adele");
@@ -49,11 +49,7 @@ export default function HomePage() {
       {loading && <p>Loading...</p>}
 
       {/* TODO fix ui on search song results*/}
-      <div>
-        {songs.map((song) => (
-          <SongCard key={song.trackId} song={song} />
-        ))}
-      </div>
+      <SongGrid songs={songs} />
     </main>
   );
 }
