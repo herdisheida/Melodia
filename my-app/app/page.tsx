@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { searchSongs } from "@/lib/itunes";
 import type { Song } from "@/lib/types";
 
-import SongCard from "@/components/SongCard";
+import SongCard from "@/components/search/SongCard";
 
 export default function HomePage() {
   const [query, setQuery] = useState("adele");
