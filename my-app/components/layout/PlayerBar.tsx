@@ -11,9 +11,9 @@ export default function PlayerBar() {
       {currentSong ? (
         <div className={styles.songInfo}>
           <img
+            className={styles.image}
             src={currentSong.artworkUrl100}
             alt={currentSong.trackName}
-            className={styles.artwork}
           />
           <div>
             <div>{currentSong.trackName}</div>

@@ -4,6 +4,15 @@
   --color-black: black;
 
   /* main colors */
-  --color-main-bg: #181818;
+  --color-main-bg: #121212;
   --color-main-font: white;
+  --color-secondary-font: #808080;
+
+  /* accent colors */
+  --color-accent-1: #7dd3fc;
+  --color-accent-2: #7f73e9;
+
+  /* card colors */
+  --color-card-bg: #1c1c1c;
+  --color-play-btn-bg: var(--color-accent-2);
 }

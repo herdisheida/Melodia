@@ -1,11 +1,48 @@
 .card {
-  background-color: red;
+  background: var(--color-card-bg);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: white;
 
   .info {
     background-color: green;
+
+    .image {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .artist {
+      color: var(--color-secondary-font);
+    }
+    .albumLink {
+      color: var(--color-accent-1);
+    }
+    .albumLink:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 .playBtn {
-  background-color: blue;
+  margin-top: 0.5rem;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-play-btn-bg);
+  color: var(--color-main-font);
+  cursor: pointer;
+}
+
+.playBtn:hover {
+  opacity: 0.9;
+  scale: 1.02;
 }

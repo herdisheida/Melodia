@@ -11,14 +11,22 @@ export default function SongCard({ song }: { song: Song }) {
   return (
     <div className={styles.card}>
       <div key={song.trackId} className={styles.info}>
+        {/* album image -> goes to album page */}
         <Link href={`/album/${song.collectionId}`}>
-          <img src={song.artworkUrl100} alt={song.trackName} />
+          <img
+            className={styles.image}
+            src={song.artworkUrl100}
+            alt={song.trackName}
+          />
         </Link>
 
-        <h3>{song.trackName}</h3>
-        <p>{song.artistName}</p>
+        <h3 className={styles.title}>{song.trackName}</h3>
+        <p className={styles.artist}>{song.artistName}</p>
 
-        <Link href={`/album/${song.collectionId}`}>{song.collectionName}</Link>
+        {/* album name -> goes to album page */}
+        <Link href={`/album/${song.collectionId}`} className={styles.albumLink}>
+          {song.collectionName}
+        </Link>
       </div>
 
       <button onClick={() => setCurrentSong(song)} className={styles.playBtn}>

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   padding: 1rem;
-  background: var(--color-main-bg);
+  background: var(--color-black);
   color: var(--color-main-font);
   z-index: 1000;
 
@@ -13,7 +13,7 @@
     align-items: center;
     gap: 1rem;
 
-    .artwork {
+    .image {
       width: 80px;
       height: 80px;
       object-fit: cover;
