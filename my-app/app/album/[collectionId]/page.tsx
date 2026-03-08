@@ -34,6 +34,8 @@ export default function AlbumPage() {
 
   return (
     <main>
+      {/* TODO add back buton */}
+      {/* TODO fix this messs */}
       <img src={album.artworkUrl100} alt={album.collectionName} />
       <h1>{album.collectionName}</h1>
       <p>{album.artistName}</p>
