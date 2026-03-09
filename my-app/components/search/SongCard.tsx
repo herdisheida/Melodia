@@ -5,7 +5,7 @@ import { usePlayer } from "@/context/PlayerContext";
 import Link from "next/link";
 import styles from "./SongCard.module.css";
 
-const MAX_TITLE_CHARS = 25; //
+const MAX_TITLE_CHARS = 23; //
 
 export default function SongCard({ song }: { song: Song }) {
   const { setCurrentSong } = usePlayer();

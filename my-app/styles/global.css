@@ -16,7 +16,7 @@ body,
 
 main {
   /* make sure stuff sem er falið bakvið player er sjáanlegt */
-  margin-bottom: 10rem;
+  margin-bottom: 3.5rem;
 }
 
 .appLayout {
@@ -30,7 +30,7 @@ main {
   .sidebarArea {
     display: flex;
     justify-content: center;
-    background: var(--color-black);
+    background: var(--color-secondary-bg);
     border-radius: 1.25rem;
   }
 }

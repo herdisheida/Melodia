@@ -8,7 +8,6 @@
   justify-content: flex-end; /* so info looks næs, þótt song-title wrappi around og gerir card-ið stærra */
 
   gap: 0.6rem;
-  color: var(--color-main-font);
 
   .image {
     width: 100%;
@@ -24,14 +23,21 @@
     }
     .artist {
       color: var(--color-secondary-font);
+      font-size: 0.7rem;
     }
     .albumLink {
+      font-size: 0.7rem;
       color: var(--color-accent-1);
     }
     .albumLink:hover {
       text-decoration: underline;
     }
   }
+}
+
+.card:hover {
+  background: var(--color-card-hover-bg);
+  scale: 1.02;
 }
 
 .playBtn {
