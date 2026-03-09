@@ -34,6 +34,7 @@ export default function HomePage() {
 
   return (
     <main>
+      {/* TODO make sure it doesn't reload when we go back to homepage after going to album etc */}
       <SearchInput value={query} onChange={setQuery} />
       {/* TODO: Implement loading spinner ? */}
       {loading ? <p>Loading...</p> : <SongGrid songs={songs} />}

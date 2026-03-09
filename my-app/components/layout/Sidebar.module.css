@@ -1,4 +1,6 @@
 .sidebar {
+  margin-top: 4rem;
+
   height: 100vh;
   /* padding: 4rem 4.7rem 0 2.5rem; */
   display: flex;
