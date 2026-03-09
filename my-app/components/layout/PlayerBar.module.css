@@ -1,10 +1,4 @@
 .playerBar {
-  width: 100%;
-  padding: 1rem;
-  background: var(--color-black);
-  color: var(--color-main-font);
-  z-index: 1000;
-
   /* fixed position on bottom of screen */
   position: fixed;
   left: 0;
@@ -15,8 +9,9 @@
   align-items: center;
 
   height: 100px;
-  background: var(--color-main-bg);
+  width: 100%;
   padding: 10px 1.5rem;
+  background: var(--color-main-bg);
 
   .songInfo {
     display: flex;
