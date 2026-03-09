@@ -1,6 +1,6 @@
 .sidebar {
   height: 100vh;
-  padding: 4rem 2.7rem;
+  padding: 4rem 4.7rem 0 2.5rem; /* top right bottom left */
   display: flex;
   flex-direction: column;
   gap: 1rem;
