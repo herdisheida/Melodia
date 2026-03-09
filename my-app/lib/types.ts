@@ -11,7 +11,7 @@ export interface Song {
   collectionId: number;
   collectionName: string;
   artworkUrl100: string;
-  trackTimeMillis: number; // duration of the track in milliseconds
+  trackTimeMillis?: number; // duration of the track in milliseconds
 
   previewUrl?: string;
   trackNumber?: number;
