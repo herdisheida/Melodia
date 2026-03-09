@@ -1,10 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import type { Song } from "@/lib/types";
 import { usePlayer } from "@/context/PlayerContext";
-import Link from "next/link";
 import styles from "./SongCard.module.css";
-import PlayButton from "@/components/ui/PlayButton";
 
 const MAX_TITLE_CHARS = 23; //
 
@@ -37,6 +36,7 @@ export default function SongCard({ song }: { song: Song }) {
           />
         </Link>
 
+        {/* playbtn */}
         <button onClick={() => playSong(song)} className={styles.playBtn}>
           <svg viewBox="0 0 24 24" width="30" height="30">
             <path fill="black" d="M8 5v14l11-7z" />
