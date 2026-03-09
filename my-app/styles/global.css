@@ -24,10 +24,14 @@ main {
   grid-template-columns: 160px 1fr;
   min-height: 100vh;
 
+  /* space between objects and the border/end of the screen */
+  padding: 0.7rem;
+
   .sidebarArea {
     display: flex;
     justify-content: center;
     background: var(--color-black);
+    border-radius: 1.25rem;
   }
 }
 
