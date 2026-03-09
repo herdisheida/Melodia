@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePlayer } from "@/context/PlayerContext";
 import PlayButton from "@/components/ui/PlayButton";
 import PauseButton from "@/components/ui/PauseButton";
+import PrevButton from "@/components/ui/PrevButton";
+import NextButton from "@/components/ui/NextButton";
+
 import styles from "./PlayerBar.module.css";
 
 export default function PlayerBar() {
@@ -31,8 +34,12 @@ export default function PlayerBar() {
               <div className={styles.artistName}>{currentSong.artistName}</div>
             </div>
           </div>
-          <div className={styles.controls} onClick={togglePlay}>
-            {isPlaying ? <PauseButton /> : <PlayButton />}
+          <div className={styles.controls}>
+            <PrevButton />
+            <div onClick={togglePlay}>
+              {isPlaying ? <PauseButton /> : <PlayButton />}
+            </div>
+            <NextButton />
           </div>
         </>
       ) : (

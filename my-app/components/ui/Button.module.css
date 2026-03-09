@@ -1,3 +1,4 @@
+/* pause og play btn */
 .pauseBtn,
 .playBtn {
   border-radius: 50%; /* circle */
@@ -19,4 +20,23 @@
 .pauseBtn:hover,
 .playBtn:hover {
   transform: scale(1.09);
+}
+
+/* next og prev btn */
+.prevBtn svg,
+.nextBtn svg {
+  cursor: pointer;
+  color: var(--color-secondary-font);
+}
+
+.prevBtn:hover svg,
+.nextBtn:hover svg {
+  transform: scale(1.09);
+  color: var(--color-white);
+}
+
+/* dont want box sem er kemur utan um button html elementið */
+.prevBtn:focus,
+.nextBtn:focus {
+  outline: none;
 }

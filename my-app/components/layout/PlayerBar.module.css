@@ -5,7 +5,9 @@
   right: 0;
   bottom: 0;
   z-index: 1000;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 
   height: 100px;
@@ -33,5 +35,12 @@
       font-size: 0.7rem;
       color: var(--color-secondary-font);
     }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 }
