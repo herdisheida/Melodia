@@ -11,7 +11,9 @@ export default function SearchInput({ value, onChange }: SearchInputProps) {
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
-      onChange(inputValue); // trigger search
+      if (inputValue !== value) {
+        onChange(inputValue); // trigger search only if input value has changed
+      }
     }
   }
 
