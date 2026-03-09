@@ -1,0 +1,19 @@
+.container {
+  margin: 4rem;
+
+  .image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  .title {
+    font-size: large;
+    font-weight: bold;
+  }
+  .artistName,
+  .genre {
+    font-size: medium;
+    color: var(--color-secondary-font);
+  }
+}
