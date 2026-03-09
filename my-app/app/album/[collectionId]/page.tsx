@@ -42,28 +42,3 @@ export default function AlbumPage() {
     </main>
   );
 }
-// TODO (10%) Display the Album Header (Art, Artist, Genre) and a list of all tracks in the album.
-
-// <main className={styles.container}>
-//   <div className={styles.albumHeader}>
-//     <img
-//       src={album.artworkUrl100}
-//       alt={album.collectionName}
-//       className={styles.image}
-//     />
-//     <h1 className={styles.title}>{album.collectionName}</h1>
-//     <p className={styles.artistName}>{album.artistName}</p>
-//     <p className={styles.genre}>{album.primaryGenreName}</p>
-//   </div>
-
-//   <div className={styles.tracks}>
-//     <h2>Tracks</h2>
-//     <ul>
-//       {tracks.map((track) => (
-//         <li key={track.trackId}>
-//           {track.trackNumber}. {track.trackName}
-//         </li>
-//       ))}
-//     </ul>
-//   </div>
-// </main>

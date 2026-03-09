@@ -1,19 +1,9 @@
-.container {
-  margin: 4rem;
+.page {
+  padding: 1.5rem;
+}
 
-  .image {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-  }
-
-  .title {
-    font-size: large;
-    font-weight: bold;
-  }
-  .artistName,
-  .genre {
-    font-size: medium;
-    color: var(--color-secondary-font);
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
   }
 }
