@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import AlbumHeader from "@/components/album/AlbumHeader";
 import TrackList from "@/components/album/TrackList";
 import styles from "./AlbumPage.module.css";
+import Spinner from "@/components/ui/Spinner";
 
 export default function AlbumPage() {
   const param = useParams() as { collectionId: string };
@@ -31,8 +32,8 @@ export default function AlbumPage() {
     loadAlbum();
   }, [param.collectionId]);
 
-  // TODO loading spinner display (same as in saerch) -- reuse loading component
-  if (loading) return <p>Loading album...</p>;
+  if (loading) return <Spinner />;
+  // TODO handle error state better
   if (!album) return <p>Album not found.</p>;
 
   return (

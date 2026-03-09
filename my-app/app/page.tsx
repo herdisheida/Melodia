@@ -5,6 +5,7 @@ import { searchSongs } from "@/lib/itunes";
 import type { Song } from "@/lib/types";
 import SearchInput from "@/components/search/SearchInput";
 import SongGrid from "@/components/search/SongGrid";
+import Spinner from "@/components/ui/Spinner";
 
 export default function HomePage() {
   const [query, setQuery] = useState("");
@@ -36,8 +37,8 @@ export default function HomePage() {
     <main>
       {/* TODO make sure it doesn't reload when we go back to homepage after going to album etc */}
       <SearchInput value={query} onChange={setQuery} />
-      {/* TODO: Implement loading spinner ? */}
-      {loading ? <p>Loading...</p> : <SongGrid songs={songs} />}
+
+      {loading ? <Spinner /> : <SongGrid songs={songs} />}
     </main>
   );
 }
