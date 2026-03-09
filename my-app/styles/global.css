@@ -14,22 +14,21 @@ body,
   color: var(--color-main-font);
 }
 
+main {
+  /* make sure stuff sem er falið bakvið player er sjáanlegt */
+  margin-bottom: 10rem;
+}
+
 .appLayout {
   display: grid;
   grid-template-columns: 160px 1fr;
   min-height: 100vh;
-}
 
-.sidebarArea {
-  display: flex;
-  justify-content: center;
-  background: var(--color-black);
-}
-
-.mainArea {
-  min-width: 0;
-  padding: 2rem;
-  padding-bottom: 110px; /* space for overlay playerBar */
+  .sidebarArea {
+    display: flex;
+    justify-content: center;
+    background: var(--color-black);
+  }
 }
 
 p,

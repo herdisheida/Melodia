@@ -1,0 +1,90 @@
+.section {
+  /* TODO fix color or make it variable */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(18, 18, 18, 0.95) 80%
+  );
+  padding: 1rem 2rem 2rem;
+  border-radius: 0 0 1.25rem 1.25rem;
+
+  .headingRow {
+    display: grid;
+    grid-template-columns: 56px 1fr 80px;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--color-secondary-font);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 0.5rem;
+
+    .timeHeading {
+      text-align: right;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      display: grid;
+      grid-template-columns: 56px 1fr 80px;
+      align-items: center;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: none;
+      background: transparent;
+      color: var(--color-main-font);
+      text-align: left;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .row:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .number {
+      color: var(--color-secondary-font);
+      font-size: 0.95rem;
+    }
+
+    .trackInfo {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .trackName {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-main-font);
+    }
+
+    .artistName {
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+      color: var(--color-secondary-font);
+    }
+
+    .duration {
+      text-align: right;
+      color: var(--color-secondary-font);
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .headingRow,
+  .row {
+    grid-template-columns: 40px 1fr 65px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
