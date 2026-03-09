@@ -17,29 +17,29 @@ export default function PlayerBar() {
       {currentSong ? (
         <>
           <div className={styles.songInfo}>
-            <Link href={`/album/${currentSong.collectionId}`}>
+            {/* <Link href={`/album/${currentSong.collectionId}`}>
               <img
                 className={styles.image}
                 src={currentSong.artworkUrl100}
                 alt={currentSong.trackName}
               />
-            </Link>
-            {/* <img
+            </Link> */}
+            <img
               className={styles.image}
               src={currentSong.artworkUrl100}
               alt={currentSong.trackName}
-            /> */}
+            />
             <div>
               <div className={styles.trackName}>{currentSong.trackName}</div>
               <div className={styles.artistName}>{currentSong.artistName}</div>
             </div>
           </div>
           <div className={styles.controls}>
-            <PrevButton />
+            {/* <PrevButton /> */}
             <div onClick={togglePlay}>
               {isPlaying ? <PauseButton /> : <PlayButton />}
             </div>
-            <NextButton />
+            {/* <NextButton /> */}
           </div>
         </>
       ) : (

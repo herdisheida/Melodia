@@ -30,6 +30,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   function setCurrentSong(song: Song | null) {
     setCurrentSongState(song);
     setIsPlaying(!!song);
+
+    console.log("setCurrentSong called with:", song);
   }
 
   function playSong(song?: Song) {
