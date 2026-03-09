@@ -1,7 +1,11 @@
-export default function PlayButton() {
+import styles from "./Button.module.css";
+
+export default function PauseButton() {
   return (
-    <button className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">
-      Play
+    <button className={styles.playBtn}>
+      <svg viewBox="0 0 24 24" width="30" height="30">
+        <path fill="black" d="M8 5v14l11-7z" />
+      </svg>
     </button>
   );
 }
