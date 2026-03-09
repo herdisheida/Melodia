@@ -15,10 +15,8 @@
   align-items: center;
 
   height: 100px;
-  background: var(--color-black);
-  color: var(--color-main-font);
-  border-top: 2px solid var(--color-border);
-  padding: 0 2rem;
+  background: var(--color-main-bg);
+  padding: 10px 1.5rem;
 
   .songInfo {
     display: flex;
@@ -33,9 +31,11 @@
     }
 
     .trackName {
+      font-size: 0.9rem;
       font-weight: bold;
     }
     .artistName {
+      font-size: 0.7rem;
       color: var(--color-secondary-font);
     }
   }
