@@ -6,12 +6,7 @@
   min-height: 320px;
 
   /* TODO make this a color a variable -- or change the color */
-  background: linear-gradient(
-    180deg,
-    rgb(120, 128, 24) 0%,
-    rgb(79, 86, 16) 45%,
-    rgb(18, 18, 18) 100%
-  );
+  background: var(--color-gradient-1);
   border-radius: 1.25rem 1.25rem 0 0;
 
   .cover {

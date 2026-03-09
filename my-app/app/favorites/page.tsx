@@ -6,7 +6,7 @@ export default function FavoritesPage() {
     <div className={styles.container}>
       <h1>Favorites</h1>
       <p>Here you can see your favorite songs.</p>
-      {/* TODO implement this? -- held við þurfutm ekki */}
+      {/* TODO favourite page? -- held við þurfutm ekki */}
     </div>
   );
 }

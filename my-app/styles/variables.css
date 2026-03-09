@@ -12,7 +12,7 @@
   --color-border: #333;
 
   /* accent colors */
-  --color-accent-1: #7dd3fc;
+  --color-accent-1: #05fcf9;
   --color-accent-2: #7f73e9;
 
   /* card colors */
@@ -20,4 +20,24 @@
   --color-card-hover-bg: var(--color-secondary-bg);
 
   --color-play-btn-bg: var(--color-accent-1);
+
+  /* album page */
+  --color-gradient-1: linear-gradient(
+    180deg,
+    #00a1a1 0%,
+    #004446 45%,
+    rgb(18, 18, 18) 100%
+  );
+  --color-gradient-2: linear-gradient(
+    180deg,
+    rgb(120, 128, 24) 0%,
+    rgb(79, 86, 16) 45%,
+    rgb(18, 18, 18) 100%
+  );
+  --color-gradient-3: linear-gradient(
+    180deg,
+    rgb(120, 24, 24) 0%,
+    rgb(79, 16, 16) 45%,
+    rgb(18, 18, 18) 100%
+  );
 }
