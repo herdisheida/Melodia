@@ -22,20 +22,25 @@ export async function lookupAlbum(
 
   const url = `/api/album/${collectionId}`; // folder url
 
-  const response = await fetch(url);
+  try {
+    const response = await fetch(url);
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch album details");
+    if (!response.ok) {
+      return { album: null, tracks: [] };
+    }
+
+    const data: LookupResponse = await response.json();
+
+    const album =
+      data.results.find((item) => item.wrapperType === "collection") ?? null;
+
+    const tracks = data.results.filter(
+      (item) => item.wrapperType === "track",
+    ) as Song[];
+
+    return { album: album as Album | null, tracks };
+  } catch (error) {
+    console.error("lookupAlbum error:", error);
+    return { album: null, tracks: [] };
   }
-
-  const data: LookupResponse = await response.json();
-
-  const album =
-    data.results.find((item) => item.wrapperType === "collection") ?? null;
-
-  const tracks = data.results.filter(
-    (item) => item.wrapperType === "track",
-  ) as Song[];
-
-  return { album: album as Album | null, tracks };
 }
