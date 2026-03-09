@@ -34,11 +34,11 @@ export default function HomePage() {
   }, [query]);
 
   return (
-    <main>
+    <div>
       {/* TODO make sure it doesn't reload when we go back to homepage after going to album etc */}
       <SearchInput value={query} onChange={setQuery} />
 
       {loading ? <Spinner /> : <SongGrid songs={songs} />}
-    </main>
+    </div>
   );
 }

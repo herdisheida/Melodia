@@ -37,9 +37,9 @@ export default function AlbumPage() {
   if (!album) return <p>Album not found.</p>;
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <AlbumHeader album={album} tracks={tracks} />
       <TrackList tracks={tracks} />
-    </main>
+    </div>
   );
 }

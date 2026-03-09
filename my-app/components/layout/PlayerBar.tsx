@@ -6,8 +6,6 @@ import styles from "./PlayerBar.module.css";
 export default function PlayerBar() {
   const { currentSong } = usePlayer();
 
-  // TODO make sure it's not rerendering when changing pages
-
   return (
     <div className={styles.playerBar}>
       {currentSong ? (
