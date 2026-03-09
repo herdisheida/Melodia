@@ -6,7 +6,7 @@ import PauseButton from "@/components/ui/PauseButton";
 import styles from "./PlayerBar.module.css";
 
 export default function PlayerBar() {
-  const { currentSong } = usePlayer();
+  const { currentSong, isPlaying, togglePlay } = usePlayer();
 
   return (
     <div className={styles.playerBar}>
@@ -23,9 +23,8 @@ export default function PlayerBar() {
               <div className={styles.artistName}>{currentSong.artistName}</div>
             </div>
           </div>
-          <div className={styles.controls}>
-            <PlayButton />
-            <PauseButton />
+          <div className={styles.controls} onClick={togglePlay}>
+            {isPlaying ? <PauseButton /> : <PlayButton />}
           </div>
         </>
       ) : (

@@ -8,7 +8,7 @@ import styles from "./SongCard.module.css";
 const MAX_TITLE_CHARS = 23; //
 
 export default function SongCard({ song }: { song: Song }) {
-  const { setCurrentSong } = usePlayer();
+  const { playSong } = usePlayer();
 
   // album name: up to XX characters -> if longer do '...' */
   const albumName =
@@ -36,7 +36,7 @@ export default function SongCard({ song }: { song: Song }) {
           />
         </Link>
 
-        <button onClick={() => setCurrentSong(song)} className={styles.playBtn}>
+        <button onClick={() => playSong(song)} className={styles.playBtn}>
           <svg viewBox="0 0 24 24" width="20" height="20">
             <path fill="black" d="M8 5v14l11-7z" />
           </svg>
