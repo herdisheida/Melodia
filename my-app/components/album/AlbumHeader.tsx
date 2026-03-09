@@ -6,15 +6,15 @@ type AlbumHeaderProps = {
   tracks: Song[];
 };
 
-function formatTotalDuration(tracks: Song[]) {
-  const totalMs = tracks.reduce(
-    (sum, track) => sum + (track.trackTimeMillis ?? 0),
-    0,
-  );
-  const totalMinutes = Math.floor(totalMs / 1000 / 60);
+// function formatTotalDuration(tracks: Song[]) {
+//   const totalMs = tracks.reduce(
+//     (sum, track) => sum + (track.trackTimeMillis ?? 0),
+//     0,
+//   );
+//   const totalMinutes = Math.floor(totalMs / 1000 / 60);
 
-  return `${tracks.length} song${tracks.length !== 1 ? "s" : ""}, ${totalMinutes} min`;
-}
+//   return `${tracks.length} song${tracks.length !== 1 ? "s" : ""}, ${totalMinutes} min`;
+// }
 
 export default function AlbumHeader({ album, tracks }: AlbumHeaderProps) {
   return (
@@ -33,8 +33,8 @@ export default function AlbumHeader({ album, tracks }: AlbumHeaderProps) {
           <span className={styles.artist}>{album.artistName}</span>
           <span className={styles.dot}>•</span>
           <span className={styles.genre}>{album.primaryGenreName}</span>
-          <span className={styles.dot}>•</span>
-          <span className={styles.duration}>{formatTotalDuration(tracks)}</span>
+          {/* <span className={styles.dot}>•</span> */}
+          {/* <span className={styles.duration}>{formatTotalDuration(tracks)}</span> */}
         </div>
       </div>
     </section>

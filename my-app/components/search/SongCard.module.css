@@ -78,5 +78,8 @@
 .card:hover .playBtn {
   opacity: 1;
   transform: translateY(0);
+}
+
+.playBtn:hover {
   transform: scale(1.2);
 }
