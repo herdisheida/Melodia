@@ -7,7 +7,7 @@ import SearchInput from "@/components/search/SearchInput";
 import SongGrid from "@/components/search/SongGrid";
 
 export default function HomePage() {
-  const [query, setQuery] = useState("adele");
+  const [query, setQuery] = useState("");
   const [songs, setSongs] = useState<Song[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -34,9 +34,8 @@ export default function HomePage() {
 
   return (
     <main>
-      <h1>Melodia</h1>
-      <h3>Browse Songs</h3>
       <SearchInput value={query} onChange={setQuery} />
+      {/* TODO: Implement loading spinner ? */}
       {loading ? <p>Loading...</p> : <SongGrid songs={songs} />}
     </main>
   );

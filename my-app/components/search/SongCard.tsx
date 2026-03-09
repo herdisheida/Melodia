@@ -5,8 +5,25 @@ import { usePlayer } from "@/context/PlayerContext";
 import Link from "next/link";
 import styles from "./SongCard.module.css";
 
+const MAX_TITLE_CHARS = 25; //
+
 export default function SongCard({ song }: { song: Song }) {
   const { setCurrentSong } = usePlayer();
+
+  // album name: up to XX characters -> if longer do '...' */
+  const albumName =
+    song.collectionName.substring(0, MAX_TITLE_CHARS) +
+    (song.collectionName.length > MAX_TITLE_CHARS ? "..." : "");
+
+  // song title: up to XX characters -> if longer do '...' */
+  const songTitle =
+    song.trackName.substring(0, MAX_TITLE_CHARS) +
+    (song.trackName.length > MAX_TITLE_CHARS ? "..." : "");
+
+  // artist name: up to XX characters -> if longer do '...' */
+  const artistName =
+    song.artistName.substring(0, MAX_TITLE_CHARS) +
+    (song.artistName.length > MAX_TITLE_CHARS ? "..." : "");
 
   return (
     <div className={styles.card}>
@@ -20,14 +37,12 @@ export default function SongCard({ song }: { song: Song }) {
       </Link>
 
       <div key={song.trackId} className={styles.info}>
-        <h3 className={styles.title}>{song.trackName}</h3>
-        <p className={styles.artist}>{song.artistName}</p>
+        <h3 className={styles.title}>{songTitle}</h3>
+        <p className={styles.artist}>{artistName}</p>
 
         {/* album name -> goes to album page */}
         <Link href={`/album/${song.collectionId}`} className={styles.albumLink}>
-          {/* album name: up to XX characters -> if longer do '...' */}
-          {song.collectionName.substring(0, 30) +
-            (song.collectionName.length > 30 ? "..." : "")}
+          {albumName}
         </Link>
       </div>
 

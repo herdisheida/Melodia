@@ -2,8 +2,11 @@
   background: var(--color-card-bg);
   border-radius: 14px;
   padding: 1rem;
+
   display: flex;
   flex-direction: column;
+  justify-content: flex-end; /* so info looks næs, þótt song-title wrappi around og gerir card-ið stærra */
+
   gap: 0.6rem;
   color: var(--color-main-font);
 
