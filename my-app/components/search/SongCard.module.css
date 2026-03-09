@@ -39,7 +39,6 @@
   border: none;
   border-radius: 8px;
   background: var(--color-play-btn-bg);
-  color: var(--color-main-font);
   cursor: pointer;
 }
 

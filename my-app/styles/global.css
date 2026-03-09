@@ -20,6 +20,12 @@ body,
   min-height: 100vh;
 }
 
+.sidebarArea {
+  display: flex;
+  justify-content: center;
+  background: var(--color-black);
+}
+
 .mainArea {
   min-width: 0;
   padding: 2rem;
