@@ -27,28 +27,30 @@ export default function SongCard({ song }: { song: Song }) {
 
   return (
     <div className={styles.card}>
-      {/* album image -> goes to album page */}
-      <Link href={`/album/${song.collectionId}`}>
-        <img
-          className={styles.image}
-          src={song.artworkUrl100}
-          alt={song.trackName}
-        />
-      </Link>
+      <div className={styles.imageWrapper}>
+        <Link href={`/album/${song.collectionId}`}>
+          <img
+            className={styles.image}
+            src={song.artworkUrl100}
+            alt={song.trackName}
+          />
+        </Link>
+
+        <button onClick={() => setCurrentSong(song)} className={styles.playBtn}>
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="black" d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
 
       <div key={song.trackId} className={styles.info}>
         <h3 className={styles.title}>{songTitle}</h3>
         <p className={styles.artist}>{artistName}</p>
 
-        {/* album name -> goes to album page */}
         <Link href={`/album/${song.collectionId}`} className={styles.albumLink}>
           {albumName}
         </Link>
       </div>
-
-      <button onClick={() => setCurrentSong(song)} className={styles.playBtn}>
-        Play
-      </button>
     </div>
   );
 }
