@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./SearchInput.module.css";
 
 type SearchInputProps = {
@@ -6,17 +7,22 @@ type SearchInputProps = {
 };
 
 export default function SearchInput({ value, onChange }: SearchInputProps) {
+  const [inputValue, setInputValue] = useState(value);
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
+      onChange(inputValue); // trigger search
+    }
+  }
+
   return (
     <div className={styles.container}>
-      {/* <h3>Browse Songs</h3> */}
-
-      {/* TODO: Implement so that it only changes when press enter */}
       <input
         type="text"
         placeholder="Search songs..."
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        // className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown={handleKeyDown}
         className={styles.input}
       />
     </div>

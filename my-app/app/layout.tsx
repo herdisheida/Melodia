@@ -17,7 +17,7 @@ export default function RootLayout({
             <aside className="sidebarArea">
               <Sidebar />
             </aside>
-            <main className="mainContent">{children}</main>
+            <main>{children}</main>
             <PlayerBar />
           </div>
         </PlayerProvider>
