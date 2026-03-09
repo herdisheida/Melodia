@@ -19,7 +19,7 @@ function formatDuration(ms?: number) {
 }
 
 export default function TrackList({ tracks }: TrackListProps) {
-  const { setCurrentSong } = usePlayer();
+  const { playSong } = usePlayer();
 
   return (
     <section className={styles.section}>
@@ -34,7 +34,7 @@ export default function TrackList({ tracks }: TrackListProps) {
           <button
             key={track.trackId}
             className={styles.row}
-            onClick={() => setCurrentSong(track)}
+            onClick={() => playSong(track)}
             type="button"
           >
             <span className={styles.number}>
