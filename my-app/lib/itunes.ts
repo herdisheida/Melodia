@@ -30,6 +30,11 @@ export async function lookupAlbum(
 
   const data: LookupResponse = await response.json();
 
+  // no album found
+  if (!data.results || data.results.length === 0) {
+    return { album: null, tracks: [] };
+  }
+
   const album =
     data.results.find((item) => item.wrapperType === "collection") ?? null;
 
