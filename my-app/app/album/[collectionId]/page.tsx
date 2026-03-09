@@ -6,8 +6,8 @@ import type { Album, Song } from "@/lib/types";
 import { useParams } from "next/navigation";
 import AlbumHeader from "@/components/album/AlbumHeader";
 import TrackList from "@/components/album/TrackList";
-import styles from "./AlbumPage.module.css";
 import Spinner from "@/components/ui/Spinner";
+import styles from "./AlbumPage.module.css";
 
 export default function AlbumPage() {
   const param = useParams() as { collectionId: string };
@@ -34,7 +34,7 @@ export default function AlbumPage() {
 
   if (loading) return <Spinner />;
   // TODO handle error state better
-  if (!album) return <p>Album not found.</p>;
+  if (!album) return <p className={styles.notFoundPage}>Album not found.</p>;
 
   return (
     <div className={styles.page}>
